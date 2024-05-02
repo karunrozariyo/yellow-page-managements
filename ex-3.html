@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>GPS Management System</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+body {
+background: url('img/6.jpg') no-repeat center center fixed;
+background-size: cover;
+color: #fff;
+}
+.navbar {
+background-color: rgba(0, 0, 0, 0.8);
+}
+.container {
+<div class="gps-item">
+<img src="img/2.jpg" class="img-fluid" alt="Car X1">
+
+<h3>Car</h3>
+<p id="x">A stylish sedan equipped with advanced GPS technology for precise
+navigation and tracking.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="gps-item">
+<img src="img/3.jpg" class="img-fluid" alt="Truck Y2">
+<h3>Truck</h3>
+<p id="x">A robust truck with a powerful GPS system, ensuring efficient logistics and
+real-time monitoring.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="gps-item">
+<img src="img/7.jpg" class="img-fluid" alt="Bus Z3">
+<h3>Bus</h3>
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script
+src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+// JavaScript code example
+alert("Welcome to our GPS Management System!");
+$(document).ready(function () {
+$('a[href^="#"]').on('click', function (event) {
+event.preventDefault();
+
+const target = this.hash;
+$('html, body').animate({
+scrollTop: $(target).offset().top
+}, 800);
+});
+});
+// jQuery code to fade in the navigation bar on scroll
+$(window).scroll(function () {
+if ($(this).scrollTop() > 100) {
+$('.navbar').fadeIn();
+} else {
+$('.navbar').fadeOut();} });
+
+// jQuery code to toggle visibility of GPS items on button click
+$('.nav-link[href="#features"]').on('click', function () {
+$('.gps-item').toggle();
+});
+</script>
+</body>
+</html>

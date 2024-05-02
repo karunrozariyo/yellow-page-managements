@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yellow Page Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    form {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 200px;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      background-color: #ffffff;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+
+    li:hover {
+      background-color: #f2f2f2;
+    }
+    textarea {
+      width: 300px; 
+      height: 150px; 
+      padding: 8px;
+      box-sizing: border-box;
+      resize: none; 
+      margin-left: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>FEEDBACK FORM</h1>
+
+  <form onsubmit="event.preventDefault(); addListing()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br>
+
+    <label for="category">Category:</label>
+    <input type="text" id="category" required><br>
+
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" required><br>
+
+    <datalist id="suggestions">
+      <option value="General Inquiry">
+      <option value="Feedback">
+      <option value="Technical Support">
+      
+    </datalist>
+
+    <label for="subject">Subject:</label>
+    <textarea id="subject" rows="8" cols="10" required></textarea><br> 
+
+    <button type="submit">Add Listing</button>
+  </form>
+  <ul id="listings"></ul>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
